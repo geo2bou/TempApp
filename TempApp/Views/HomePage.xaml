@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TempApp.Views.HomePage">
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Image VerticalOptions="CenterAndExpand" Source="https://img.lovepik.com/element/45009/2124.png_300.png" />
+            <Button VerticalOptions="CenterAndExpand" Text="Logout" TextColor="#0077be" Clicked="Logout" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
