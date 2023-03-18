@@ -11,7 +11,7 @@ namespace TempApp.Views
 	{	
 		public RegistrationPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
 		}
 
         void Register(System.Object sender, System.EventArgs e)
