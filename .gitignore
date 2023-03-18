@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+TempApp.Android/Properties/AndroidManifest.xml
+TempApp.Android/Resources/Resource.designer.cs
+TempApp.Android/TempApp.Android.csproj
