@@ -8,30 +8,34 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Grid ColumnDefinitions="*,279,*" RowDefinitions="*,160,*">
+                <Grid ColumnDefinitions="*,279,*" RowDefinitions="*,300,0,*">
                     <Ellipse Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="168"
                         HeightRequest="168" Stroke="#FFFF9900" StrokeThickness="4" Fill="White"/>
 
                     <Image Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" HeightRequest="150"        
-                        Source="https://devblogs.microsoft.com/xamarin/wp-content/uploads/sites/44/2019/03/Screen-Shot-2017-01-03-at-3.35.53-PM-150x150.png">
+                        Source="#">
                         <Image.Clip>
                             <EllipseGeometry Center="75,75" RadiusX="75" RadiusY="75"/>
                         </Image.Clip>
                     </Image>
                 </Grid>
 
-                <Grid VerticalOptions="CenterAndExpand" Margin="20" RowSpacing="20">
+                <Grid Margin="20" RowSpacing="20">
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-
+                     
                     <Entry Placeholder="Username" x:Name="EntryUser" Grid.Row="0" />
                     <Entry Placeholder="Password" x:Name="EntryPassword" IsPassword="True" Grid.Row="1" />
                     <Button Text="Login" Grid.Row="2" BackgroundColor="#FFFF9900" TextColor="#181415" FontSize="Medium" FontFamily="Century Gothic" Clicked="Login" />
-                    <Button Text="Don't have an account? Sign Up" Grid.Row="3" TextColor="White" FontSize="Medium" FontFamily="Century Gothic" Clicked="Signup" />
+                </Grid>
+
+                <Grid Margin="60, -80, 0, 0">
+                    <Label Text="Don't have an account?" Grid.Column="0" HorizontalOptions="End" VerticalOptions="Center" FontSize="Medium" FontFamily="Century Gothic" TextColor="White"></Label>
+                    <Button Text="Sign Up" Grid.Column="1" HorizontalOptions="Start" TextColor="#FFFF9900" FontSize="Medium" FontFamily="Century Gothic" Clicked="Signup" />
                 </Grid>
             </StackLayout>
         </ScrollView>    

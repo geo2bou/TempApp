@@ -34,7 +34,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Row="4">
-                        <Button Text="Register" WidthRequest="100" TextColor="White" Background="#0077be" Clicked="Register" />
+                        <Button Text="Register" WidthRequest="100" TextColor="White" Background="#FFFF9900" Clicked="Register" />
                     </StackLayout>
                 </Grid>
             </StackLayout>
