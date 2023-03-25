@@ -24,9 +24,9 @@ namespace TempApp.Views
 
 			if (query != null)
 			{
-				App.Current.MainPage = new NavigationPage(new HomePage());
-			}
-			else
+                App.Current.MainPage = new NavigationPage(new HomePage());
+            }
+            else
 			{
 				Device.BeginInvokeOnMainThread(async () =>
 				{
