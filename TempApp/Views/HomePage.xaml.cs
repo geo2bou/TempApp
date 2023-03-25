@@ -9,7 +9,7 @@ namespace TempApp.Views
 	{	
 		public HomePage ()
 		{
-            SetValue(NavigationPage.HasNavigationBarProperty, false);
+            //SetValue(NavigationPage.HasNavigationBarProperty, true);
 
             InitializeComponent();
 		}

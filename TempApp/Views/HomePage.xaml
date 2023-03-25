@@ -5,9 +5,14 @@
     x:Class="TempApp.Views.HomePage">
 
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Image VerticalOptions="CenterAndExpand" Source="https://img.lovepik.com/element/45009/2124.png_300.png" />
-            <Button VerticalOptions="CenterAndExpand" Text="Logout" TextColor="#0077be" Clicked="Logout" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Grid VerticalOptions="CenterAndExpand" Margin="20" RowSpacing="20">
+                    <StackLayout Grid.Row="0">
+                        <Button VerticalOptions="CenterAndExpand" WidthRequest="100" Text="Logout" TextColor="White" Background="#FFFF9900" Clicked="Logout" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
