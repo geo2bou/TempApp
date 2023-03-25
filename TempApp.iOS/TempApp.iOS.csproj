@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -132,7 +133,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TempApp\TempApp.csproj">
-      <Project>{9E996892-B1EC-48D7-811B-AA06C032A3D9}</Project>
+      <Project>{BAA5F9E8-D0E1-4FB9-AF7C-DAC02E1883F1}</Project>
       <Name>TempApp</Name>
     </ProjectReference>
   </ItemGroup>
