@@ -7,8 +7,8 @@
              mc:Ignorable="d"
              x:Class="TempApp.App">
     <Application.Resources>
-        <ResourceDictionary Source="common/GlobalStyles.xaml">
+        <!--<ResourceDictionary Source="common/GlobalStyles.xaml">
             <StyleSheet Source="common/GlobalStyles.css"/>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
     </Application.Resources>
 </Application>
