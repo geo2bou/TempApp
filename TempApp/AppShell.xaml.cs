@@ -27,6 +27,11 @@ namespace TempApp
             Shell.SetFlyoutBehavior(Shell.Current, FlyoutBehavior.Disabled);
             Shell.Current.FlyoutIsPresented = false;
         }
+
+        private async void Logout(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }
 

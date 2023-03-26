@@ -20,42 +20,12 @@
         Route="Home"
         Title="Home Page"
         Icon="{StaticResource IconTabMyFlights}">
-        <ShellContent
-            ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
     </FlyoutItem>
-
-    <!-- <FlyoutItem
-        Title="Today"
-        Icon="{StaticResource IconTabToday}">
-        <ShellContent
-            ContentTemplate="{DataTemplate views:TodayPage}" />
-    </FlyoutItem>
-
-    <FlyoutItem
-        Title="Book"
-        Route="book"
-        Icon="{StaticResource IconTabBook}">
-        <ShellContent
-            ContentTemplate="{DataTemplate views:BookingPage}" />
-    </FlyoutItem>
-
-    <FlyoutItem
-        Title="Notifications"
-        Icon="{StaticResource IconTabNotifications}">
-        <ShellContent
-            ContentTemplate="{DataTemplate views:NotificationsPage}" />
-    </FlyoutItem>
-
-    <FlyoutItem
-        Title="Track Bags"
-        Icon="{StaticResource IconTabLuggage}">
-        <ShellContent
-            ContentTemplate="{DataTemplate views:BagTrackerPage}" />
-    </FlyoutItem> -->
 
     <MenuItem
         Text="Logout"
-        Clicked="MenuItem_Clicked"
+        Clicked="Logout"
         IconImageSource="{FontImage FontFamily={StaticResource FontAwesome},
                 Glyph={x:Static local:IconFont.DoorOpen}, Color=Black,Size=16
                 }" />
