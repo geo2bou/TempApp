@@ -13,7 +13,7 @@ namespace TempApp.Views
 		{
 			SetValue(NavigationPage.HasNavigationBarProperty, false);
 
-			InitializeComponent ();
+			InitializeComponent();
 		}
 
         async void Login(System.Object sender, System.EventArgs e)
