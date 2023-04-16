@@ -26,8 +26,12 @@
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Themes\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Themes\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Models\" />
   </ItemGroup>
 </Project>

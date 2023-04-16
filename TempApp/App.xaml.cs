@@ -18,8 +18,8 @@ namespace TempApp
 
             InitializeComponent();
 
-            MainPage = new AppShell();
-            //MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
 
             this.RequestedThemeChanged += App_RequestedThemeChanged;
         }

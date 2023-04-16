@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TempApp.ViewModels"
+    x:Class="TempApp.Views.NoteInfoPage">
+
+    <ContentPage.BindingContext>
+        <local:NoteInfoViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Προσθήκη" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding NoteList}"
+                      HasUnevenRows="True"
+                      SeparatorColor="Blue"
+                      SeparatorVisibility="None"
+                      IsPullToRefreshEnabled="True"
+                      RefreshControlColor="Red">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Favourite"></MenuItem>
+                                <MenuItem Text="Delete"></MenuItem>
+                            </ViewCell.ContextActions>
+                            <Grid Padding="10">
+                                <Frame CornerRadius="10" HasShadow="True">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding ImageUrl}" WidthRequest="100" HeightRequest="100"></Image>
+                                        <StackLayout VerticalOptions="Center">
+                                            <Label VerticalOptions="Center" Text="{Binding Name}" FontSize="Large"></Label>
+                                            <Label VerticalOptions="Center" Text="{Binding Description}" FontSize="Large"></Label>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
+                                            <Image Source="edit.png"
+                                                   WidthRequest="30"
+                                                   HeightRequest="30"></Image>
+                                            <Image Source="delete.png"
+                                                   WidthRequest="30"
+                                                   HeightRequest="30"></Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="Πληροφορίες Σημείωσης" FontSize="Large" TextColor="Gray"></Label>
+                    </StackLayout>
+                </ListView.Header>
+
+                <ListView.Footer>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button Text="Load More" FontSize="Large" TextColor="Gray"></Button>
+                    </StackLayout>
+                </ListView.Footer>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
