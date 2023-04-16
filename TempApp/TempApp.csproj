@@ -25,5 +25,9 @@
 
   <ItemGroup>
     <Folder Include="Views\" />
+    <Folder Include="Themes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Themes\" />
   </ItemGroup>
 </Project>
