@@ -27,7 +27,7 @@ namespace TempApp.Views
         private void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
             TappedEventArgs tappedEventArgs = (TappedEventArgs)e;
-            NoteInfo noteInfo = ((NoteInfoViewModel)BindingContext).NoteList.Where(e => e.NoteId == (int)tappedEventArgs.Parameter).FirstOrDefault();
+            NoteInfo noteInfo = ((NoteInfoViewModel)BindingContext).NoteList.Where(t1 => t1.NoteId == (int)tappedEventArgs.Parameter).FirstOrDefault();
 
             Navigation.PushAsync(new AddOrEditNotePage());
         }
@@ -35,7 +35,7 @@ namespace TempApp.Views
         private void TapGestureRecognizer_Tapped_2(System.Object sender, System.EventArgs e)
         {
             TappedEventArgs tappedEventArgs = (TappedEventArgs)e;
-            NoteInfo noteInfo = ((NoteInfoViewModel)BindingContext).NoteList.Where(e => e.NoteId == (int)tappedEventArgs.Parameter).FirstOrDefault();
+            NoteInfo noteInfo = ((NoteInfoViewModel)BindingContext).NoteList.Where(t2 => t2.NoteId == (int)tappedEventArgs.Parameter).FirstOrDefault();
 
             ((NoteInfoViewModel)BindingContext).NoteList.Remove(noteInfo);
         }
