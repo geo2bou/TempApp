@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Προσθήκη" />
+        <ToolbarItem Text="Προσθήκη"  Clicked="AddNote"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -39,10 +39,28 @@
                                         <StackLayout VerticalOptions="Center" HorizontalOptions="EndAndExpand">
                                             <Image Source="edit.png"
                                                    WidthRequest="30"
-                                                   HeightRequest="30"></Image>
+                                                   HeightRequest="30">
+
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="TapGestureRecognizer_Tapped"
+                                                        CommandParameter="{Binding NoteId}">
+                                                    </TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+
+                                            </Image>
                                             <Image Source="delete.png"
                                                    WidthRequest="30"
-                                                   HeightRequest="30"></Image>
+                                                   HeightRequest="30">
+
+                                                 <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="TapGestureRecognizer_Tapped_2"
+                                                        CommandParameter="{Binding NoteId}">
+                                                    </TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
+
+                                            </Image>
                                         </StackLayout>
                                     </StackLayout>
                                 </Frame>

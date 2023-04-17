@@ -2,11 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TempApp.ViewModels"
     x:Class="TempApp.Views.AddOrEditNotePage">
+
+    <ContentPage.BindingContext>
+        <local:AddOrEditNoteViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="Σημείωση"></Entry>
-            <Entry Placeholder="Κείμενο"></Entry>
+            <Entry Placeholder="Σημείωση" Text="{Binding Note.Name}"></Entry>
+            <Entry Placeholder="Κείμενο" Text="{Binding Note.Description}"></Entry>
             <Button Text="Αποθήκευση" Clicked="SaveNote"></Button>
         </StackLayout>
     </ContentPage.Content>
